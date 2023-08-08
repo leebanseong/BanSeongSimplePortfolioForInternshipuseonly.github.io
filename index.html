@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lee Ban Seong Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+        <nav>
+            <div class="logo">
+                <h1>BS</h1>
+                
+            </div>
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </nav>
+        <div class="header-text">
+        <p>Computer Science Student</p>
+        <h1>Hi, I'm <span>Lee Ban Seong</span></h1>
+    </div>
+    </div>
+    </div>
+    <!-- about -->
+    <div id="about">
+       <div class="container">
+        <div class="row"> 
+            <div class="about-col-1">
+                <img src="backgroundimage/selfie.jpeg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I am currently a last year last semester Computer Science Student in UCSI University. I am seeking for a position in your company as a software developer intern where I can apply my programming skills and leaning from the company</p>
+            <div class="tab-title">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>Java</span><br>Netbeans</li>
+                    <li><span>HTML, CSS, JavaScript(JS)</span><br>Visual Studio Code</li>
+                    <li><span>Python</span><br>Pycharm, Eclipse</li>
+                    <li><span>.NET</span><br>Visual Studio(VB)</li>
+                    <li><span>MySQL</span><br>MySQL Workbench</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>2018 (Jan - March)</span><br>EMMER ZECNA Parkson Mytown (Promoter at Men's Slack Department)</li>
+                    <li><span>2018 (April - Dec)</span><br>Abooong Cheras Trader Square (Yogurt and Dessert Maker)</li>
+                    <li><span>2019 (Oct - Dec)</span><br>Aboong Eko Cheras Mall (Yogurt and Dessert Maker)</li>
+                    <li><span>2019 (Oct - Dec)</span><br>Answer Tea Eko Cheras Mall (Tea Barista)</li>
+                    <li><span>Event and Roadshow Promoter</span><br>Mamee, Coca-Cola</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>2018-2020 (UCSI University)</span><br>Diploma in Information Technology<br>CGPA : 3.64<br>UCSI UNIVERSITY TRUST EDUCATION GRANT HOLDER</li>
+                    <li><span>2021-Present (UCSI University)</span><br>Bachelor of Computer Science(Honours)<br>UCSI UNIVERSITY TRUST EDUCATION GRANT HOLDER</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+       </div>
+    </div>
+
+<!-- Portfolio -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="admin/finish/admin option page.PNG">
+                <div class="layer">
+                    <h3>Smart POS System</h3>
+                    <p>This is an automated inventory and employee management oriented POS System</p>
+                    
+                </div>
+            </div>
+            <div class="work">
+                <img src="Inventory/inventory new add quantity.PNG">
+                <div class="layer">
+                    <h3>Inventory Management</h3>
+                    <p>The automated inventory management function will provide real-time inventory quantity after every order deduction</p>  
+                </div>
+            </div>
+            <div class="work">
+                <img src="Attendance/employee id 1 clock in successful message.PNG">
+                <div class="layer">
+                    <h3>Employee Attendance</h3>
+                    <p>This integrated attendance function will record the employee attendance as well as calculate the salary automatically for the employer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>Email : leebs000204@gmail.com</p>
+                <p>Contact Number : 0169781102</p>
+                
+            </div>
+      
+        </div>
+    </div>
+    <a href="RESUME_Internship_Lee Ban Seong.pdf" download class="btn btn2">Download CV</a>
+
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+</body>
+</html>
